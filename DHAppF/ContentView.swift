@@ -1,24 +1,30 @@
-//
-//  ContentView.swift
-//  DHAppF
-//
-//  Created by Ong Eason on 14/6/2024.
-//
-
 import SwiftUI
+import PhotosUI
 
-struct ContentView: View {
+struct TabView_TabItems: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            BMenu()
+                .tabItem {
+                    Image(systemName: "cup.and.saucer.fill")
+                    Text("Breakfast")
+                }
+            TabFour()
+                .tabItem {
+                    Image(systemName: "gearshape.fill")
+                    Text("Settings")
+                }
         }
-        .padding()
+        .onAppear {
+            let appearance = UITabBarAppearance()
+            appearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterial)
+            appearance.backgroundColor = UIColor(Color.green.opacity(0.2))
+            UITabBar.appearance().standardAppearance = appearance
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+        }
     }
 }
 
 #Preview {
-    ContentView()
+    TabView_TabItems()
 }
