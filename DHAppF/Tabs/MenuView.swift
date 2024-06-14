@@ -110,6 +110,8 @@ struct BMenu: View {
 
     
 
-//#Preview {
-//    BMenu()
-//}
+#Preview {
+    BMenu()
+        .modelContainer(MenuItem.preview)
+
+}

@@ -44,6 +44,11 @@ struct MenuDetailView: View {
         .navigationTitle("Menu Detail")
         .navigationBarTitleDisplayMode(.inline)
     }
+   private func formatDate(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        return dateFormatter.string(from: date)
+    }
    
 }
 
