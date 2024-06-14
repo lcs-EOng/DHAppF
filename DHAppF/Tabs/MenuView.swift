@@ -10,6 +10,7 @@ import SwiftData
 
 
 struct BMenu: View {
+    //MARK: Stored properties
     @State private var presentingNewItemSheet = false
     @State var searchText = ""
     @State private var meal = 1
@@ -18,6 +19,7 @@ struct BMenu: View {
     //Access the model context
     @Environment(\.modelContext) var modelContext
     
+    //MARK: Computed properties
     var body: some View{
         NavigationView{
             VStack{

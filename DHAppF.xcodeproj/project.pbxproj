@@ -86,6 +86,7 @@
 				26EA38042C1D020200771BF7 /* DHAppFApp.swift */,
 				26EA38122C1D023600771BF7 /* OpeningVIew.swift */,
 				26EA38062C1D020200771BF7 /* ContentView.swift */,
+				26EA383B2C1D0F3900771BF7 /* ViewModel */,
 				26EA38172C1D026200771BF7 /* Tabs */,
 				26EA38232C1D02C200771BF7 /* Views */,
 				26EA381E2C1D028C00771BF7 /* Model */,
@@ -120,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				26EA381F2C1D02A100771BF7 /* MenuItem.swift */,
-				26EA38212C1D02B200771BF7 /* MenuViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,6 +131,14 @@
 				26EA38262C1D02D800771BF7 /* MenuDetailView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		26EA383B2C1D0F3900771BF7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				26EA38212C1D02B200771BF7 /* MenuViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
