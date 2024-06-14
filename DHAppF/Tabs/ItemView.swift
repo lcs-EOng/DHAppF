@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ItemView: View {
     
-    let currentItem: MenuItem
+   @Bindable var currentItem: MenuItem
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -31,8 +31,8 @@ struct ItemView: View {
     }
 }
 
-#Preview {
-    ItemView(currentItem: dinner1)
-}
+//#Preview {
+//    ItemView(currentItem: dinner1)
+//}
 
 

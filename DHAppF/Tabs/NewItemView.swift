@@ -88,6 +88,8 @@ struct NewItemView: View {
     func saveFoodItem(withTitle title: String) {
         let mealTypes = ["Breakfast", "Lunch", "Dinner"]
         let menuItem = MenuItem(nameOfMeal: nameOfFood, dateOfFood: date, mealType: mealTypes[meal], image: "", ingredients: ingredients, calories: calories, hasAllergens: isToggleOn, allergens: isToggleOn ? allergens : nil)
+        
+        // Use the model context to insert the new to-do
         modelContext.insert(menuItem)
     }
     
@@ -104,7 +106,6 @@ struct NewItemView: View {
     }
 }
 
-// Dummy preview for context
 //#Preview {
 //    NewItemView(showSheet: .constant(true))
 //}
