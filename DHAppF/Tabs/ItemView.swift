@@ -43,8 +43,13 @@ struct ItemView: View {
     }
 }
 
-//#Preview {
-//    ItemView(currentItem: dinner1)
-//}
+#Preview {
+    let container = MenuItem.preview
+    return List{
+        ItemView(currentItem: MenuItem.anotherItem)
+        ItemView(currentItem: MenuItem.someItem)
+    }
+    .modelContainer(container)
+}
 
 

@@ -49,6 +49,10 @@ extension MenuItem{
         return container
     }
 }
+extension MenuItem{
+    static let someItem = MenuItem(nameOfMeal: "bread", dateOfFood: formatDate("01-01-2024"), mealType: "breakfast", image: "", ingredients: "Flour", calories: "100", hasAllergens: false)
+    static let anotherItem = MenuItem(nameOfMeal: "eggs", dateOfFood: formatDate("01-02-2024"), mealType: "breakfast", image: "", ingredients: "eggs", calories: "100", hasAllergens: false)
+}
 
 
 
