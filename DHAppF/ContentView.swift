@@ -6,8 +6,8 @@ struct TabView_TabItems: View {
         TabView {
             BMenu()
                 .tabItem {
-                    Image(systemName: "cup.and.saucer.fill")
-                    Text("Breakfast")
+                    Image(systemName: "fork.knife.circle")
+                    Text("Menus")
                 }
             TabFour()
                 .tabItem {
