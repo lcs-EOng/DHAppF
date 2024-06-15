@@ -21,7 +21,7 @@ struct NewItemView: View {
     @State private var date = Date()
     @State private var allergens = ""
     @Environment(\.modelContext) var modelContext
-
+    
     // Binding to control whether this view is visible
     @Binding var showSheet: Bool
     
@@ -69,7 +69,10 @@ struct NewItemView: View {
                         clearForm()
                         showSheet = false
                     }
-                    .disabled(!isFormValid())
+                    .disabled(nameOfFood.isEmpty == true)
+                    .disabled(ingredients.isEmpty == true)
+                    .disabled(calories.isEmpty == true)
+                    .disabled((isToggleOn && allergens.isEmpty))
                     .padding()
                 }
             }
@@ -101,9 +104,6 @@ struct NewItemView: View {
         allergens = ""
     }
     
-    func isFormValid() -> Bool {
-        !nameOfFood.isEmpty && !ingredients.isEmpty && !calories.isEmpty && (!isToggleOn || !allergens.isEmpty)
-    }
 }
 
 //#Preview {
