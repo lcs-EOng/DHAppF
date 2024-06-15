@@ -25,7 +25,9 @@ struct BMenu: View {
             VStack{
                 List{
                     ForEach(menus){ menu in
-                        ItemView(currentItem: menu)
+                        NavigationLink(destination: MenuDetailView(menuDetail: menu)){
+                            ItemView(currentItem: menu)
+                        }
                     }
                     .onDelete(perform:  removeRows)
                     
